@@ -2,9 +2,8 @@
 
 """Define a class Square."""
 class Square:
-    """ This the square """
+    """ Initialize new square """
     def __init__(self, size):
-        """Initialize new square """
         self.size = size
 
     @property
