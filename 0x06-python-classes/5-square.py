@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """Define a class Square."""
+
 class Square:
     """ Initialize new square."""
     def __init__(self, size):
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
