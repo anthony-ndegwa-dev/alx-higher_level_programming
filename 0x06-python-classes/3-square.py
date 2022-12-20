@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 """ A class to define a square by its size """
+
+
 class Square:
     """ Initialize the square object """
     def __init__(self, size=0):
