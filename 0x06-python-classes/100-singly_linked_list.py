@@ -6,7 +6,7 @@
 class Node:
     """Initialize a new Node."""
     def __init__(self, data, next_node=None):
-        self.__data = data
+        self.data = data
         self.next_node = next_node
 
     @property
