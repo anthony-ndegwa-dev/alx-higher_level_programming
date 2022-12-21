@@ -34,9 +34,6 @@ class Node:
         self.__next_node = value
 
 
-"""Define class SinglyLinkedList."""
-
-
 class SinglyLinkedList:
     def __str__(self):
         """Stringify value."""
