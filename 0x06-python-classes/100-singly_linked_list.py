@@ -34,6 +34,9 @@ class Node:
         self.__next_node = value
 
 
+"""Defines a singly linked list."""
+
+
 class SinglyLinkedList:
     def __str__(self):
         """Stringify value."""
@@ -53,7 +56,7 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
-        """Sort data."""
+        """Inserts a new Node."""
         ptr = self.__head
 
         while ptr is not None:
