@@ -56,6 +56,7 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
+        """Sort data."""
         ptr = self.__head
 
         while ptr is not None:
