@@ -11,20 +11,24 @@ class Node:
 
     @property
     def data(self):
+        """Get data."""
         return self.__data
 
     @data.setter
     def data(self, value):
+        """Set value of data."""
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
 
     @property
     def next_node(self):
+        """Get next node."""
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
+        """Set value of next node."""
         if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
@@ -35,6 +39,7 @@ class Node:
 
 class SinglyLinkedList:
     def __str__(self):
+        """Stringify value."""
         rtn = ""
         ptr = self.__head
 
@@ -47,6 +52,7 @@ class SinglyLinkedList:
         return rtn
 
     def __init__(self):
+        """Initialize private value."""
         self.__head = None
 
     def sorted_insert(self, value):
