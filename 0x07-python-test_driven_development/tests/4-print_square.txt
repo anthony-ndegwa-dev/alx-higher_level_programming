@@ -1,0 +1,37 @@
+The 4-print_square module
+=========================
+
+Import function from the module
+
+>>> print_square = __import__('4-print_square').print_square
+
+
+Print a square of size 4:
+
+>>> print_square(4)
+####
+####
+####
+####
+
+
+Passing size less than 0:
+
+>>> print_square(-1)
+Traceback (most recent call last):
+
+
+Passing string as size:
+
+>>> print_square('5')
+Traceback (most recent call last):
+ ...
+TypeError: size must be an integer
+
+
+Passing float as size:
+
+>>> print_square(8.6)
+Traceback (most recent call last):
+ ...
+TypeError: size must be an integer
