@@ -1,0 +1,66 @@
+Test for ``0-add_integer`` module
+=================================
+
+Funtion to test: ``add_integer()``
+=================================
+
+Importing function from the module:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Adding 1 and 2
+>>> add_integer(1, 2)
+3
+
+Subtracting 100 and 2
+>>> add_integer(100, -2)
+98
+
+Adding 2.1 and 98
+>>> add_integer(2.1)
+100
+
+Adding positive float and negative int
+>>> add_integer(100.3, -2)
+98
+
+Passing one value a
+>>> add_integer(4)
+102
+
+Adding int and string
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+  ...
+TypeError: b must be an integer
+
+Passing None
+>>> add_integer(None)
+Traceback (most recent call last):
+  ...
+TypeError: a must be an integer
+
+Add string and int
+>>> add_integer('1', 1)
+Traceback (most recent call last):
+  ...
+TypeError: a must be an integer
+
+Adding strings
+>>> add_integer('2', '1')
+Traceback (most recent call last):
+  ...
+TypeError: a must be an integer
+
+>>> add_integer("Hello")
+Traceback (most recent call last):
+  ...
+TypeError: a must be an integer
+
+Add floats
+>>> add_integer(2.9, 2.9)
+4
+
+Passing int a alone
+>>> add_integer(9)
+107
+
