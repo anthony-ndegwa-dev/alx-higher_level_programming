@@ -22,3 +22,27 @@ Divide empty matrix:
 Traceback (most recent call last):
   ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Passing a tuple:
+>>> matrix_divided((3, 6, 9), 3)
+Traceback (most recent call last):
+ ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Passing strings:
+>>> matrix_divided([["1"], ["2", "3"], ["5", "6", "7"]], 10)
+Traceback (most recent call last):
+ ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Passing div as a list:
+>>> matrix_divided([[5.7, 8.1], [7.7, 4.9]], [2])
+Traceback (most recent call last):
+ ...
+TypeError: div must be a number
+
+Passing div as string:
+>>> matrix_divided([[10, 50], [30, 20]], "10")
+Traceback (most recent call last):
+ ...
+TypeError: div must be a number
