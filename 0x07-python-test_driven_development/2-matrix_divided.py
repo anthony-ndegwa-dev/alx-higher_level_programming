@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-#!/usr/bin/python3
-
 """
 
 A module composed of a function that divides the numbers of a matrix
