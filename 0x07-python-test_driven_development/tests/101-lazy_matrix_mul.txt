@@ -1,0 +1,8 @@
+The 101-lazy_matrix_mul module
+==============================
+
+Import function from module:
+>>> matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+
+
