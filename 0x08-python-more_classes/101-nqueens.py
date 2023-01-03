@@ -50,7 +50,11 @@ def Queen(m_queen, nqueen):
                 Queen(m_queen, nqueen + 1)
 
 def solveNQueen(size):
-    """Function that invokes the Backtracking algorithm"""
+    """Function that invokes the Backtracking algorithm
+
+    Args:
+        size: size of the chessboard
+    """
 
     m_queen = [-1 for i in range(size)]
     Queen(m_queen, 0)
