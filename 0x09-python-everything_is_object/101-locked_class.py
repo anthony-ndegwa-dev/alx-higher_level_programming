@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Module restricting user to create first_name instance attributes"""
+"""Create first_name instance attributes"""
 
 
 class LockedClass:
