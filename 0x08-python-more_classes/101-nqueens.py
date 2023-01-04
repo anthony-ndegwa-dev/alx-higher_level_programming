@@ -6,8 +6,7 @@
 def isSafe(m_queen, nqueen):
 
     """
-    Function to determine if queens can kill each other on not
-    
+    Function to determine if queens can kill each other or not
     Args:
         m_queen: array that has the queens positions
         nqueen: queen number
@@ -27,9 +26,9 @@ def isSafe(m_queen, nqueen):
     return True
 
 def print_result(m_queen, nqueen):
-
     """Prints the list with the Queens positions"""
 
+    
     res = []
     for i in range(nqueen):
         res.append([i, m_queen[i]])
@@ -37,8 +36,8 @@ def print_result(m_queen, nqueen):
     print(res)
 
 def Queen(m_queen, nqueen):
-
     """Function that executes the Backtracking algorithm"""
+
 
     if nqueen is len(m_queen):
         print_result(m_queen, nqueen)
@@ -53,17 +52,19 @@ def Queen(m_queen, nqueen):
                 Queen(m_queen, nqueen + 1)
 
 def solveNQueen(size):
-
     """Function that invokes the Backtracking algorithm
 
     Args:
         size: size of the chessboard
     """
 
+
     m_queen = [-1 for i in range(size)]
     Queen(m_queen, 0)
 
 if __name__ == '__main__':
+    
+
     import sys
 
     if len(sys.argv) == 1 or len(sys.argv) > 2:
@@ -72,7 +73,7 @@ if __name__ == '__main__':
 
     try:
         size = int(sys.argv[1])
-    except:
+    except Exception:
         print("N must be a number")
         sys.exit(1)
 
