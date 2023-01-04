@@ -7,11 +7,9 @@ def isSafe(m_queen, nqueen):
 
 
     """Function to determine if queens can kill each other or not
-
     Args:
     m_queen: array that has the queens positions
     nqueen: queen number
-    
     Returns:
     True: when queens can't kill each other
     False: when some of the queens can kill
@@ -28,6 +26,8 @@ def isSafe(m_queen, nqueen):
 
 
 def print_result(m_queen, nqueen):
+
+
     """Prints the list with the Queens positions"""
 
     
@@ -39,6 +39,8 @@ def print_result(m_queen, nqueen):
 
 
 def Queen(m_queen, nqueen):
+
+
     """Function that executes the Backtracking algorithm"""
 
 
@@ -56,6 +58,8 @@ def Queen(m_queen, nqueen):
 
 
 def solveNQueen(size):
+
+
     """Function that invokes the Backtracking algorithm
 
     Args:
