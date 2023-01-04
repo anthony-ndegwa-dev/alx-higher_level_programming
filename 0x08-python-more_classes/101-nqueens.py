@@ -5,15 +5,17 @@
 
 def isSafe(m_queen, nqueen):
 
+
     """
     Function to determine if queens can kill each other or not
+    
     Args:
-        m_queen: array that has the queens positions
-        nqueen: queen number
-
+    m_queen: array that has the queens positions
+    nqueen: queen number
+    
     Returns:
-        True: when queens can't kill each other
-        False: when some of the queens can kill
+    True: when queens can't kill each other
+    False: when some of the queens can kill
     """
 
     for i in range(nqueen):
