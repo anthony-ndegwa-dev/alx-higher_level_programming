@@ -18,7 +18,7 @@ def matrix_divided(matrix, div):
     New matrix with the result of the division
 
     Raises:
-    TypeError: 
+    TypeError:
     If the elements of the matrix aren't lists
     If the elements of the lists aren't integers or floats
     If div is not an integer or float number
@@ -52,5 +52,6 @@ def matrix_divided(matrix, div):
                 raise TypeError(type_msg)
 
         len_e = len(elems)
-        new_lst = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
+        new_lst = list(map(lambda x: list(map(lambda y:
+            round(y / div, 2), x)), matrix))
         return (new_lst)
