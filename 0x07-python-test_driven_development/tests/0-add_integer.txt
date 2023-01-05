@@ -83,3 +83,9 @@ Passing int a alone
 >>> add_integer(9)
 107
 
+
+Case Overflow:
+>>> add_integer(float('inf'), 0)
+Traceback (most recent call last):
+ ...
+OverflowError: cannot convert float infinity to integer
