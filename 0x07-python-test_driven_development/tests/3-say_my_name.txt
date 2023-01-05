@@ -10,12 +10,10 @@ Passing first and last names:
 >>> say_my_name("John", "Smith")
 My name is John Smith
 
-
 Passing single name:
 
 >>> say_my_name("Bob")
 My name is Bob
-
 
 Passing number:
 
