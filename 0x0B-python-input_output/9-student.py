@@ -11,4 +11,4 @@ class Student:
 
     def to_json(self):
         """Method to retrieve dictionary representation of Student instance"""
-        return seld.__dict__.copy()
+        return self.__dict__.copy()
