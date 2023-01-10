@@ -9,7 +9,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """Method to retrieve dictionary representation of Student instance"""
         obj = self.__dict__.copy()
         if type(attrs) is list:
