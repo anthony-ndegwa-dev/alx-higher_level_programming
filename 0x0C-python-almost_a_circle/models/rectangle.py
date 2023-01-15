@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Module containing class Rectangle that inherits from Base """
-from base import Base
+from models.base import Base
 
 
-clase Rectangle(Base):
+class Rectangle(Base):
     """The Rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
