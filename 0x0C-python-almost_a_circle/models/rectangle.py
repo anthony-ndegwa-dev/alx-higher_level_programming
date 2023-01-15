@@ -100,7 +100,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        """Return dictionary representation of a string"""
+        """Return dictionary representation of Rectangle"""
         list_atr = ['id', 'width', 'height', 'x', 'y']
         dictionary = {}
 
