@@ -11,7 +11,7 @@ class Square(Rectangle):
     def __str__(self):
         """str method"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
-                self.width)
+                                                 self.width)
 
     @property
     def size(self):
@@ -26,7 +26,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Assign attributes"""
-        if args != None and len(args) != 0:
+        if args is not None and len(args) != 0:
             list_atr = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
                 if list_atr[i] == 'size':
