@@ -7,7 +7,7 @@ Script that fetches https://alx-intranet.hbtn.io/status
     The body of the response must be display like the following example
     (tabulation before -)
 """
-import request
+import requests
 
 
 if __name__ == '__main__':
