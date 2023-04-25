@@ -13,7 +13,7 @@ const request = require('request');
 const movieId = process.argv[2];
 
 // Make a request to the Star Wars API to get the movie data
-request(`https://swapi-api.alx-tools.com/api/films/${movieId}/`, function (error, response, body) {
+request(`http://swapi.co/api/films/${movieId}/`, function (error, response, body) {
   if (error) {
     console.error(error);
     return;
