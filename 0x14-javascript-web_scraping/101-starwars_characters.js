@@ -9,40 +9,27 @@
  */
 const request = require('request');
 
-// Get the movie ID from the command line arguments
 const movieId = process.argv[2];
+const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
-// Make a request to the Star Wars API to get the movie data
-request(`https://swapi-api.alx-tools.com/api/films/${movieId}/`, function (error, response, body) {
+request(apiUrl, function (error, response, body) {
   if (error) {
     console.error(error);
-    return;
-  }
-  if (response.statusCode !== 200) {
-    console.error(`Request failed with status code ${response.statusCode}`);
-    return;
-  }
-
-  // Parse the JSON response body into an object
-  const movieData = JSON.parse(body);
-
-  // Print all character names in the same order as the list "characters" in the response
-  movieData.characters.forEach((characterUrl) => {
-    request(characterUrl, function (error, response, body) {
-      if (error) {
-        console.error(error);
-        return;
-      }
-      if (response.statusCode !== 200) {
-        console.error(`Request failed with status code ${response.statusCode}`);
-        return;
-      }
-
-      // Parse the JSON response body into an object
-      const characterData = JSON.parse(body);
-
-      // Print the character name
-      console.log(characterData.name);
+  } else if (response.statusCode !== 200) {
+    console.error(`Unexpected status code: ${response.statusCode}`);
+  } else {
+    const movie = JSON.parse(body);
+    movie.characters.forEach((characterUrl) => {
+      request(characterUrl, function (error, response, body) {
+        if (error) {
+          console.error(error);
+        } else if (response.statusCode !== 200) {
+          console.error(`Unexpected status code: ${response.statusCode}`);
+        } else {
+          const character = JSON.parse(body);
+          console.log(character.name);
+        }
+      });
     });
-  });
+  }
 });
